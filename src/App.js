@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
-import Customers from './Customers'
+import StagePatterns from './StagePatterns/StagePatterns'
 import { BrowserRouter as Router, Switch, Route, Redirect} from 'react-router-dom';
 
 
@@ -13,14 +13,13 @@ class App extends Component {
       <Router basename={process.env.PUBLIC_URL}>
         <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Simple React App</h1>
+          <h1 className="App-title">Stage Pattern Console View</h1>
         </header>
           <Switch>
                 <Route exact path= "/" render={() => (
-                  <Redirect to="/customerlist"/>
+                  <Redirect to="/stagePatternlist"/>
                 )}/>
-                 <Route exact path='/customerlist' component={Customers} />
+                 <Route exact path='/stagePatternlist' component={StagePatterns} />
           </Switch>
       </div>
     </Router>
